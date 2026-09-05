@@ -1,5 +1,17 @@
 # RPDev Feed Modules & Hub Plugins
 
+<p align="center">
+  <a href="https://wiki.iamrp.dev/projects/rpdev-feed-modules">
+    <img src="https://img.shields.io/badge/Wiki-wiki.iamrp.dev-6366f1?style=flat&logo=bookstack&logoColor=white" alt="Project Wiki" />
+  </a>
+  <a href="https://repo.launcher.iamrp.dev">
+    <img src="https://img.shields.io/badge/Catalog-repo.launcher.iamrp.dev-10b981?style=flat&logo=buffer&logoColor=white" alt="Catalog Portal" />
+  </a>
+  <a href="https://feed.launcher.iamrp.dev">
+    <img src="https://img.shields.io/badge/Companion-feed.launcher.iamrp.dev-0ea5e9?style=flat&logo=gitbook&logoColor=white" alt="Feed Documentation" />
+  </a>
+</p>
+
 Official modular repository and central catalog for custom context modules and plugins designed for **RPDev Feed** and Android launcher feed engines.
 
 ---
@@ -24,6 +36,14 @@ This repository houses:
 | **Home Assistant State Monitor** | Smart Home | Displays entity states, climate sensors, and smart switch toggles. |
 | **Docker & Fleet Health** | DevOps & Infra | Server load metrics, container health, and cluster status. |
 | **Uptime Kuma Status Monitor** | DevOps & Infra | Latency graphs, heartbeats, and incident notices. |
+
+---
+
+## 📱 In-App Store & Plugin Manager (DevPixel16)
+
+| <img src="docs/screenshots/feed_catalog_devpixel16.png" alt="In-App Module Catalog" width="300"/> | <img src="docs/screenshots/feed_plugins_devpixel16.png" alt="Hub Plugins Manager" width="300"/> |
+|:---:|:---:|
+| **RPDevs Module Repository Catalog** | **Active Plugin Manager &amp; Ordering** |
 
 ---
 
