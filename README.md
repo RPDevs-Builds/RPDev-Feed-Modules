@@ -4,8 +4,8 @@
   <a href="https://wiki.iamrp.dev/projects/rpdev-feed-modules">
     <img src="https://img.shields.io/badge/Wiki-wiki.iamrp.dev-6366f1?style=flat&logo=bookstack&logoColor=white" alt="Project Wiki" />
   </a>
-  <a href="https://repo.launcher.iamrp.dev">
-    <img src="https://img.shields.io/badge/Catalog-repo.launcher.iamrp.dev-10b981?style=flat&logo=buffer&logoColor=white" alt="Catalog Portal" />
+  <a href="https://launcher.repo.iamrp.dev">
+    <img src="https://img.shields.io/badge/Catalog-launcher.repo.iamrp.dev-10b981?style=flat&logo=buffer&logoColor=white" alt="Catalog Portal" />
   </a>
   <a href="https://feed.launcher.iamrp.dev">
     <img src="https://img.shields.io/badge/Companion-feed.launcher.iamrp.dev-0ea5e9?style=flat&logo=gitbook&logoColor=white" alt="Feed Documentation" />
