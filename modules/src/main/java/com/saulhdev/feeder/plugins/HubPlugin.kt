@@ -16,7 +16,22 @@ enum class PluginCategory(val displayName: String) {
     SYSTEM("System & Hardware"),
     WEATHER("Weather & Environment"),
     IOT("IoT & Smart Home"),
-    CUSTOM("Custom REST / Webhooks")
+    DEVOPS("DevOps & Infrastructure"),
+    CUSTOM("Custom REST / Webhooks");
+
+    companion object {
+        fun fromDisplayName(name: String): PluginCategory? {
+            val normalized = name.trim()
+            if (normalized.equals("Smart Home & IoT", ignoreCase = true) ||
+                normalized.equals("IoT & Smart Home", ignoreCase = true)) {
+                return IOT
+            }
+            return values().firstOrNull {
+                it.displayName.equals(normalized, ignoreCase = true) ||
+                it.name.equals(normalized, ignoreCase = true)
+            }
+        }
+    }
 }
 
 enum class ConfigFieldType {

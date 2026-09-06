@@ -110,7 +110,27 @@ class DynamicRestPlugin(
                 return@withContext Result.failure(Exception("HTTP ${response.code}"))
             }
 
-            val body = response.body?.string() ?: "{}"
+            val maxResponseBytes = 2 * 1024 * 1024L // 2MB limit
+            val contentLength = response.header("Content-Length")?.toLongOrNull()
+            if (contentLength != null && contentLength > maxResponseBytes) {
+                response.close()
+                return@withContext Result.failure(Exception("Response exceeds 2MB limit: ${contentLength} bytes"))
+            }
+
+            val body = response.body?.byteStream()?.use { stream ->
+                val buffer = ByteArray(8192)
+                val out = java.io.ByteArrayOutputStream()
+                var totalBytes = 0L
+                var read: Int
+                while (stream.read(buffer).also { read = it } != -1) {
+                    totalBytes += read
+                    if (totalBytes > maxResponseBytes) {
+                        break
+                    }
+                    out.write(buffer, 0, read)
+                }
+                out.toString("UTF-8")
+            } ?: "{}"
             val chips = mutableListOf<HubChip>()
             val items = mutableListOf<HubTimelineItem>()
             var subtitle = "HTTP 200 OK"

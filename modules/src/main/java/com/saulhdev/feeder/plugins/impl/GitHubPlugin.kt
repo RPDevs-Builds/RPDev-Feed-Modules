@@ -211,7 +211,8 @@ class GitHubPlugin : HubPlugin {
                             }
                         }
                     }
-                } catch (_: Exception) {
+                } catch (e: Exception) {
+                    android.util.Log.w("GitHubPlugin", "Failed to fetch GitHub workflow runs", e)
                 }
             }
 
@@ -252,7 +253,8 @@ class GitHubPlugin : HubPlugin {
                             }
                         }
                     }
-                } catch (_: Exception) {
+                } catch (e: Exception) {
+                    android.util.Log.w("GitHubPlugin", "Failed to fetch GitHub notifications", e)
                 }
             }
 
